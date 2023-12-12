@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipo 2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/logotransparente-1.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            ProA La Falda
+          </a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h1 class="title">Último suspiro</h1>
+       
+        <div class="row">
+            <section class="box slider col-md-8 mb-4">
+                <h2>Video</h2>
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/EM-l_DYla-k?si=WOqP9yV01FI3xswC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </section>
+            <div class="box medium col-md-4 mb-4">
+                <h2>Actores</h2>
+                <p>Ian Butcher</p>
+                <p>Ayrton Godoy</p>
+                <p>Celeste Romero</p>
+                <p>Nereo Soria</p>
+                <p>Ignacio Rodriguez</p>
+            </div>
+        </div>
+        <div class="row">
+            <section class="box large-small col-md-7 mb-4">
+                <h2>StoryLine</h2>
+                <p> Cuatro turistas deben quedarse a dormir en un hotel con muy mala pinta. Encuentran una historia de desaparición y son castigados por ello, a excepción de uno, que se encargará de salvarlos.
+                </p>
+            </section>
+            <section class="box large-small col-md-5 mb-4">
+                <h2>Profesores</h2>
+                <p> Teatro: Jesica Daniela Castagnino <br>
+                    Club de Arte: Julian Coronel
+                </p>
+            </section>
+        </div>
+        <div class="row">
+            <section class="box large-small col-md-12 mb-4">
+                <h2>Equipo técnico</h2>
+                <table>
+                    <tr>
+                        <th>Rol</th>
+                        <th>Nombre</th>
+                        <th>Curso</th>
+                    </tr>
+                </table>
+            </section>
+        </div>
+    </main>
+
+    <br><br><br><br><br><br><br>
+    <footer class="footer">
+        <div class="waves">
+          <div class="wave" id="wave1"></div>
+          <div class="wave" id="wave2"></div>
+          <div class="wave" id="wave3"></div>
+          <div class="wave" id="wave4"></div>
+        </div>
+        <p>&copy;2023 Proa La Falda. Todos los derechos reservados</p>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        const people = [
+            {
+                rol: 'Guionista',
+                nombre: 'Rocio',
+                curso: '4to'
+            },
+            {
+                rol: 'Guionista',
+                nombre: 'Daniela',
+                curso: '4to'
+            },
+            {
+                rol: 'Directora',
+                nombre: 'Ingrid',
+                curso: '4to'
+            },
+            {
+                rol: 'Productora',
+                nombre: 'Francisca',
+                curso: '4to'
+            },
+            {
+                rol: 'Asistente',
+                nombre: 'Agustina',
+                curso: '4to'
+            },
+            {
+                rol: 'Director de fotografía',
+                nombre: 'Luciano',
+                curso: '4to'
+            },
+            {
+                rol: 'Sonidista',
+                nombre: 'Sebastián',
+                curso: '4to'
+            },
+            {
+                rol: 'Iluminadora',
+                nombre: 'Lara',
+                curso: '4to'
+            },
+            {
+                rol: 'Vestuarista',
+                nombre: 'Zahira',
+                curso: '4to'
+            },
+            {
+                rol: 'Asistente de montaje',
+                nombre: 'Gustavo',
+                curso: '4to'
+            },
+            {
+                rol: 'Montajista',
+                nombre: 'Julia',
+                curso: '5to'
+            }
+        ]
+
+        // selecting table
+        const table = document.querySelector('table');
+       
+        for (let person of people) {
+            // creating rows
+            const row = document.createElement('tr');
+            
+            // creating td(s)
+            for (let i = 0; i < 3; i++) {
+                let td = document.createElement('td');
+                // operador condicional ternario 
+                td.innerText = i === 0 ? person.rol : i === 1 ? person.nombre : person.curso;
+                // margen 
+                td.style.padding = '5px';
+                row.appendChild(td);
+            }
+            // adding the new rows to the table
+            table.appendChild(row);
+        }
+    </script>
+</body>
+</html>
